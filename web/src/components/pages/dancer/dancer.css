@@ -1,0 +1,78 @@
+.title_dancer {
+  text-align: center;
+  font-family: "Amita";
+  color: gold;
+  background-color: black;
+  background-position: relative;
+}
+.outer_fullpose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full_pose_michelle {
+  width: 48%;
+  height: 20%;
+}
+.full_pose_andrea {
+  width: 87%;
+  height: 20%;
+}
+.full_pose_jana {
+  width: 87%;
+  height: 20%;
+}
+.full_pose_rose {
+  width: 87%;
+  height: 20%;
+}
+.full_pose_jenna {
+  width: 87%;
+  height: 20%;
+}
+.full_pose_amarya {
+  width: 87%;
+  height: 20%;
+}
+.headshot {
+  width: 100%;
+}
+.outer_mother_daughter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+}
+.mom_daughter_jenna {
+  width: 30%;
+}
+.mom_daughter_amarya {
+  width: 50%;
+}
+.solo_photo {
+  width: 100%;
+}
+.invite_card {
+  width: 100%;
+}
+.invite_card_michelle {
+  /* whatever */
+}
+.varnum_pose {
+  width: 100%;
+}
+
+@media screen and (max-width: 430px) {
+  .title_dancer {
+    margin-top: 39px;
+  }
+  .mom_daughter_jenna {
+    width: 10%;
+  }
+  .varnum_pose {
+    width: 101%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+}

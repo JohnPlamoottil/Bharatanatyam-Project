@@ -1,0 +1,100 @@
+.avatar {
+  width: 300px; /* or any size you want */
+  height: auto;
+  gap: 20px;
+  float: left;
+  margin-right: 16px;
+}
+.school {
+  align-items: center;
+  text-align: center;
+}
+.soorya_school {
+  width: 508px; /* or any size you want */
+  height: auto;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.onstage {
+  width: fit-content;
+}
+.instructor_with_girls_onstage {
+  width: 100%;
+}
+
+.instructor_with_girls {
+  width: 100%;
+}
+.guru_second {
+  width: 55%;
+  text-align: center;
+}
+.center-image {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.instructor__image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.campus__parking-instructor {
+  width: 702px;
+  height: 414px;
+  position: absolute;
+  text-align: center;
+  left: -4px;
+  top: 2px;
+  border: none;
+  margin-left: 3px;
+}
+@media screen and (max-width: 430px) {
+  .title_Program {
+    color: gold;
+    background-color: black;
+  }
+
+  .avatar {
+    width: 220px;
+    height: auto;
+    float: left;
+    margin-right: 16px;
+  }
+  .soorya_school {
+    flex-direction: column;
+    width: 320px;
+    height: 100%;
+  }
+  .instructor__image-container {
+    flex-direction: column;
+  }
+
+  .guru_second {
+    width: 77%;
+    text-align: center;
+  }
+  .campus__parking-instructor {
+    width: 306px;
+    height: 266px;
+    left: -1px;
+    top: -37px;
+
+    margin-left: 1px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .avatar {
+    width: 178px;
+    height: auto;
+    float: left;
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+}

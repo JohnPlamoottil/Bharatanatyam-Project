@@ -1,0 +1,71 @@
+.rsvp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.rsvp-title {
+  text-align: center;
+}
+
+.rsvp-modal {
+  background: black;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  background: none;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.rsvp-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.rsvp-form input {
+  width: 99%;
+  padding: -1px;
+  margin-top: -28.75rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 6px;
+}
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: orange;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 430px) {
+  .rsvp-modal {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+}
