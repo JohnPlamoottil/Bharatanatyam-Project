@@ -22,12 +22,13 @@ function Home() {
             src={dance_bkgd}
             alt="white bkgd with 4 shadow dancers"
           ></img>
+          <Navigation />;{/* Dropdown Icon */}
         </div>
 
         <Header />
         <main className="journey"></main>
       </div>
-      <Navigation />;{/* Dropdown Icon */}
+
       <button
         className="dropdown"
         onClick={() => setMenuOpen(!menuOpen)}

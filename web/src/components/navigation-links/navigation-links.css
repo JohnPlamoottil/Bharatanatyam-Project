@@ -1,12 +1,12 @@
 .nav-links {
   display: flex;
-  gap: 31px;
+  gap: 12px;
   font-family: "Amita", "Arial", sans-serif;
   justify-content: center;
   box-sizing: border-box;
 }
 .nav-link {
-  font-size: 23px;
+  font-size: 19px;
   display: flex;
   color: gold;
   text-decoration: none;

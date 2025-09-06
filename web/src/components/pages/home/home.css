@@ -59,11 +59,11 @@
   font-family: "Amita";
   text-align: center;
   margin: 0 auto;
-  width: 55%;
+  /* width: 100%; */
   font-size: 40px;
   text-align: center;
-  padding-right: 500px;
-  padding-left: 500px;
+  /* padding-right: 500px; */
+  /* padding-left: 500px; */
   opacity: 93%;
 }
 
@@ -279,6 +279,15 @@
     padding-bottom: 1.5rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   /* iPad screen */
+  .home_group_photo {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 48%;
+    height: 100%;
+    max-width: 100%;
+    transform: rotate(9deg);
+  }
 }
