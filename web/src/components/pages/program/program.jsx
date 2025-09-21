@@ -135,9 +135,9 @@ const Program = () => {
             Mridangam - Sri Kiran R. Pai <br />
             Violin - Sri Rijesh Gopalakrishnan <br />
             Flute - Sri Preyesh Mampoyil Kudiru Parambu <br />
-            <p className="refer">
-              Please refer to the Musician Page to view each of their biography.
-            </p>
+          </p>
+          <p className="refer">
+            Please refer to the Musician Page to view each of their biography.
           </p>
           <p>
             Lets welcome the dancers to introduce their first item of this
