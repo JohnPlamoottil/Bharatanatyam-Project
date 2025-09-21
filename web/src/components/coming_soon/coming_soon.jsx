@@ -42,7 +42,7 @@ const ComingSoon = ({ message, targetDate, children }) => {
   }
 
   return (
-    <div className="coming-soon-container">
+    <main className="coming-soon-container">
       <Navigation />
       <div className="title_unavail">
         <h1>
@@ -78,7 +78,7 @@ const ComingSoon = ({ message, targetDate, children }) => {
       <Link to="/" className="home-button">
         Back to Home
       </Link>
-    </div>
+    </main>
   );
 };
 
