@@ -126,10 +126,9 @@ const Instructor = () => {
                 <iframe
                   src="https://www.youtube.com/embed/Gl9EwnTNI4g?si=AMNi-rQbllg1U4q3"
                   title="Instructor Thank You Speech"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referralpolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                   className="campus__parking-instructor"
                 ></iframe>
               </div>
