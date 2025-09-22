@@ -1,11 +1,8 @@
-.copyright {
-  width: 100%;
-}
-
 .copyright__text {
   color: gold;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 430px) {
