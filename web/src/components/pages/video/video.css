@@ -17,12 +17,12 @@
   font-size: 2rem;
   color: gold;
   margin-bottom: 20px;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   background-image: url(../../../assets/temple.png);
 }
 
 .video-subtitle {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   background-image: url(../../../assets/temple.png);
 }
 
@@ -87,12 +87,12 @@
     color: gold;
     margin-bottom: 15px;
     margin-top: 47px;
-    font-family: "Amita";
+    font-family: "Amita", cursive;
     background-color: black;
   }
 
   .video-subtitle {
-    font-family: "Amita";
+    font-family: "Amita", cursive;
     background-color: black;
     color: gold;
   }

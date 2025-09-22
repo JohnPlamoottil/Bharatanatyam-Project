@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   width: 98vw;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   font-size: 16px;
   background-color: black;
   margin-top: 72px;
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   font-size: 16px;
   position: relative;
   overflow: hidden;
@@ -68,7 +68,7 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
 }
 
 /* @keyframes pulsate {
@@ -140,7 +140,7 @@
   width: 100%;
 }
 .Contact_Us {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   color: gold;
 }
 .social {
@@ -196,7 +196,7 @@
     flex-direction: column;
   }
   .Contact_Us {
-    font-family: "Amita";
+    font-family: "Amita", cursive;
     color: gold;
   }
   .footer__text {
@@ -245,7 +245,7 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
-    font-family: "Amita";
+    font-family: "Amita", cursive;
   }
 
   /* @keyframes pulsate {

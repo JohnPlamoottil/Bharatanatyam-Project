@@ -11,12 +11,12 @@
   font-size: 2rem;
   color: gold;
   margin-bottom: 20px;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   background-image: url(../../../assets/temple.png);
 }
 
 .video-subtitle {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   background-image: url(../../../assets/temple.png);
   color: gold;
 }

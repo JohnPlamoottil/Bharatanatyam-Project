@@ -5,7 +5,7 @@
 }
 .title_Program {
   text-align: center;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   margin-top: 58px;
   color: gold;
   background-color: black;
@@ -13,7 +13,7 @@
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion_program {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   font-size: 24px;
   color: #444;
   cursor: pointer;
@@ -52,7 +52,7 @@
 }
 .sidenote {
   background-color: black;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   font-size: 15px;
   text-align: center;
   color: white;
@@ -65,7 +65,7 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-  font-family: "Amita";
+  font-family: "Amita", cursive;
 }
 .refer {
   color: white;
@@ -79,7 +79,7 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
-    font-family: "Amita";
+    font-family: "Amita", cursive;
   }
   .refer {
     color: white;

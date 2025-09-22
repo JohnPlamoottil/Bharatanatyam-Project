@@ -1,6 +1,6 @@
 /* in App.css or Guestbook.css */
 .guestbook {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   text-align: center;
   font-size: 25px;
   max-width: 600px;
@@ -27,7 +27,7 @@
 
 .guestbook input,
 .guestbook textarea {
-  font-family: "Amita";
+  font-family: "Amita", cursive;
   font-size: 25px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -54,7 +54,7 @@
 }
 @media screen and (max-width: 430px) {
   .guestbook {
-    font-family: "Amita";
+    font-family: "Amita", cursive;
     text-align: center;
     font-size: 25px;
     max-width: 600px;
@@ -81,7 +81,7 @@
 
   .guestbook input,
   .guestbook textarea {
-    font-family: "Amita";
+    font-family: "Amita", cursive;
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
