@@ -125,9 +125,7 @@ const Venue = () => {
               <iframe
                 src="https://www.youtube.com/embed/9MvIhi4PLPo?si=Aw-tHk9SDCkkPj9R"
                 title="Direction to Venue"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="no-referrer"
                 allowFullScreen
                 className="campus__parking"
               ></iframe>
