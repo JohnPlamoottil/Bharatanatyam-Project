@@ -3,11 +3,13 @@ import "./guestbook.css"; // optional for styling
 import Navigation from "../../navigation-links/navigation-links";
 import Footer from "../../footer/footer";
 import group_center from "../../../assets/group_center.png";
+import avatar from "../../../assets/avatar.jpg";
+
 import "../../../vendor/fonts.css";
 
 const HOST = import.meta.env.VITE_HOST;
 
-function Guestbook({ dancerName }) {
+function Guestbook({ dancerName, fullName }) {
   const [entries, setEntries] = useState([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -44,16 +46,20 @@ function Guestbook({ dancerName }) {
 
   return (
     <div>
-      <h2 className="guestbook">Guestbook</h2>
-      <img className="group_photo" src={group_center} alt="group center"></img>
       <div className="guestbook">
-        <h2>Guestbook</h2>
+        <h2>{fullName ? `${fullName}'s Guestbook` : "Guestbook"}</h2>
+        <img
+          className="group_photo"
+          src={group_center ? group_center : avatar}
+          alt="group center"
+        ></img>
         <form className="guestbook" onSubmit={handleSubmit}>
           <input
             type="text"
             className="name_textfield"
             placeholder="Your Name + Family Members, Surname"
             value={name}
+            min="1"
             onChange={(e) => setName(e.target.value)}
             required
           />
@@ -61,6 +67,7 @@ function Guestbook({ dancerName }) {
             placeholder="Leave a Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            min="1"
             required
           ></textarea>
           <button className="submit" type="submit">
@@ -84,8 +91,12 @@ function Guestbook({ dancerName }) {
             ))}
         </ul>
       </div>
-      <Navigation />;
-      <Footer />
+      {!fullName && (
+        <>
+          <Navigation />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
