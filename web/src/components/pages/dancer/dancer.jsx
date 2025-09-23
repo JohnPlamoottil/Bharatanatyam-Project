@@ -6,6 +6,7 @@ import { RSVPModal } from "./rsvp";
 import { Link } from "react-router-dom";
 import Navigation from "../../navigation-links/navigation-links";
 import { DANCERS } from "../../../constants.js";
+import Footer from "../../footer/footer.jsx";
 
 const Dancer = () => {
   const [searchParams] = useSearchParams();
@@ -30,158 +31,156 @@ const Dancer = () => {
 
   return (
     <div>
-      <div>
-        <Navigation />
-        <section className="questions">
-          <h2 className="title_dancer">{dancerInfo.fullName}</h2>
-          <div className="outer_fullpose">
-            <img
-              className={`full_pose full_pose_${dancerName}`}
-              src={dancerInfo.fullPose}
-              alt="Full Length Pose"
-            ></img>
-          </div>
-          <button className="accordion" onClick={handleClick}>
-            Shishya (Autobiography on {dancerInfo.shortName})
-          </button>
-          <div className="panel">
-            <p>
-              {dancerInfo.autobio}
-              <img
-                className="headshot"
-                src={dancerInfo.headshot}
-                alt="headshot"
-              ></img>
-            </p>
-          </div>
-          <button className="accordion" onClick={handleClick}>
-            Shishya (Biography from Parents)
-          </button>
-          <div className="panel">
-            {dancerInfo.shishya}
-            <div className="outer_mother_daughter">
-              <img
-                className={`mother_daughter mom_daughter_${dancerInfo.dancerName}`}
-                src={dancerInfo.mother_daughter}
-                alt={`Mom and ${dancerInfo.shortName}`}
-              />
-            </div>
-          </div>
-          <button className="accordion" onClick={handleClick}>
-            Solo Performance
-          </button>
-          <div className="panel">
-            <p>{dancerInfo.dance_title}</p>
-            <p>{dancerInfo.solo_duration}</p>
-            <p>{dancerInfo.solo}</p>
-            <p>
-              <img
-                className="solo_photo"
-                src={dancerInfo.solo_photo}
-                alt="solo_photo"
-              ></img>
-            </p>
-          </div>
-          <button className="accordion" onClick={handleClick}>
-            Invitation Card
-          </button>
-          <div className="panel">
-            <p>
-              <img
-                className={`invite_card invite_card_${dancerName}`}
-                src={dancerInfo.invite}
-                alt="invitation"
-              />
-              Dinner to Follow After the Performance
-            </p>
-          </div>
-          <button className="accordion" onClick={() => setShowRSVP(true)}>
-            RSVP
-          </button>
-          <button
-            className="dropdown"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <p className="dropdown__title">Shishya</p>
-            <span className="burger-icon">☰</span>
-          </button>
-          {menuOpen && (
-            <div className="dancers" onClick={() => setMenuOpen(false)}>
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=michelle",
-                }}
-              >
-                Michelle Eapen
-              </Link>
-
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=andrea",
-                }}
-              >
-                Andrea Thomas
-              </Link>
-
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=jana",
-                }}
-              >
-                Jana Scaria
-              </Link>
-
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=rose",
-                }}
-              >
-                Rose Thomas
-              </Link>
-
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=jenna",
-                }}
-              >
-                Jenna Plamoottil
-              </Link>
-
-              <Link
-                className="dancer_text"
-                to={{
-                  pathname: "/dancer",
-                  search: "?dancer=amarya",
-                }}
-              >
-                Amarya Koola
-              </Link>
-            </div>
-          )}
-          <div className="panel">
-            <RSVPModal isOpen={showRSVP} onClose={() => setShowRSVP(false)} />
-            <p>RSVP</p>
-            <Link to="/guestbook">Shishya</Link>
-          </div>
+      <Navigation />
+      <section className="questions">
+        <h2 className="title_dancer">{dancerInfo.fullName}</h2>
+        <div className="outer_fullpose">
           <img
-            className="varnum_pose"
-            src={dancerInfo.varnum}
-            alt="sitting pose"
+            className={`full_pose full_pose_${dancerName}`}
+            src={dancerInfo.fullPose}
+            alt="Full Length Pose"
           ></img>
-          <Guestbook dancerName={dancerName} />
-        </section>
-      </div>
+        </div>
+        <button className="accordion" onClick={handleClick}>
+          Shishya (Autobiography on {dancerInfo.shortName})
+        </button>
+        <div className="panel">
+          <p>{dancerInfo.autobio}</p>
+          <img
+            className="headshot"
+            src={dancerInfo.headshot}
+            alt="headshot"
+          ></img>
+        </div>
+        <button className="accordion" onClick={handleClick}>
+          Shishya (Biography from Parents)
+        </button>
+        <div className="panel">
+          {dancerInfo.shishya}
+          <div className="outer_mother_daughter">
+            <img
+              className={`mother_daughter mom_daughter_${dancerName}`}
+              src={dancerInfo.mother_daughter}
+              alt={`Mom and ${dancerInfo.shortName}`}
+            />
+          </div>
+        </div>
+        <button className="accordion" onClick={handleClick}>
+          Solo Performance
+        </button>
+        <div className="panel">
+          <p>{dancerInfo.dance_title}</p>
+          <p>{dancerInfo.solo_duration}</p>
+          <p>{dancerInfo.solo}</p>
+          <p>
+            <img
+              className="solo_photo"
+              src={dancerInfo.solo_photo}
+              alt="solo_photo"
+            ></img>
+          </p>
+        </div>
+        <button className="accordion" onClick={handleClick}>
+          Invitation Card
+        </button>
+        <div className="panel">
+          <p>
+            <img
+              className={`invite_card invite_card_${dancerInfo.shortName}`}
+              src={dancerInfo.invite}
+              alt="invitation"
+            />
+            Dinner to Follow After the Performance
+          </p>
+        </div>
+        <button className="accordion" onClick={() => setShowRSVP(true)}>
+          RSVP
+        </button>
+        <button
+          className="dropdown"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <p className="dropdown__title">Shishya</p>
+          <span className="burger-icon">☰</span>
+        </button>
+        {menuOpen && (
+          <div className="dancers" onClick={() => setMenuOpen(false)}>
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=michelle",
+              }}
+            >
+              Michelle Eapen
+            </Link>
+
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=andrea",
+              }}
+            >
+              Andrea Thomas
+            </Link>
+
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=jana",
+              }}
+            >
+              Jana Scaria
+            </Link>
+
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=rose",
+              }}
+            >
+              Rose Thomas
+            </Link>
+
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=jenna",
+              }}
+            >
+              Jenna Plamoottil
+            </Link>
+
+            <Link
+              className="dancer_text"
+              to={{
+                pathname: "/dancer",
+                search: "?dancer=amarya",
+              }}
+            >
+              Amarya Koola
+            </Link>
+          </div>
+        )}
+        <div className="panel">
+          <RSVPModal isOpen={showRSVP} onClose={() => setShowRSVP(false)} />
+          <p>RSVP</p>
+          <Link to="/guestbook">Shishya</Link>
+        </div>
+        <img
+          className="varnum_pose"
+          src={dancerInfo.varnum}
+          alt="sitting pose"
+        ></img>
+        <Guestbook dancerName={dancerName} fullName={dancerInfo.fullName} />
+      </section>
+      <Navigation />
+      <Footer />
     </div>
   );
 };
