@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 98vw;
+  /* width: 98vw; */
   font-family: "Amita", cursive;
   font-size: 16px;
   background-color: black;
@@ -188,10 +188,10 @@
     gap: 1rem;
     align-items: center;
     box-sizing: border-box;
-    width: 87vw;
+    /* width: 87vw; */
   }
   .footer__wrapper {
-    width: 101%;
+    /* width: 101%; */
     display: flex;
     flex-direction: column;
   }
