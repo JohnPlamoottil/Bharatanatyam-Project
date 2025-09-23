@@ -5,13 +5,19 @@
   background-color: black;
   background-position: relative;
 }
+/* .panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+} */
 .outer_fullpose {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .full_pose_michelle {
-  width: 48%;
+  width: 30%;
   height: 20%;
 }
 .full_pose_andrea {
@@ -19,7 +25,7 @@
   height: 20%;
 }
 .full_pose_jana {
-  width: 87%;
+  width: 50%;
   height: 20%;
 }
 .full_pose_rose {
@@ -27,15 +33,15 @@
   height: 20%;
 }
 .full_pose_jenna {
-  width: 87%;
+  width: 50%;
   height: 20%;
 }
 .full_pose_amarya {
-  width: 87%;
+  width: 50%;
   height: 20%;
 }
 .headshot {
-  width: 100%;
+  width: 50%;
 }
 .outer_mother_daughter {
   display: flex;
@@ -48,9 +54,13 @@
 }
 .mom_daughter_amarya {
   width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .solo_photo {
-  width: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .invite_card {
   width: 100%;
@@ -59,7 +69,9 @@
   /* whatever */
 }
 .varnum_pose {
-  width: 100%;
+  width: 50%;
+  display: flex;
+  padding-left: 25%;
 }
 
 @media screen and (max-width: 430px) {
