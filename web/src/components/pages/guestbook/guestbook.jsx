@@ -3,7 +3,6 @@ import "./guestbook.css"; // optional for styling
 import Navigation from "../../navigation-links/navigation-links";
 import Footer from "../../footer/footer";
 import group_center from "../../../assets/group_center.png";
-import avatar from "../../../assets/avatar.jpg";
 
 import "../../../vendor/fonts.css";
 
@@ -48,11 +47,13 @@ function Guestbook({ dancerName, fullName }) {
     <div>
       <div className="guestbook">
         <h2>{fullName ? `${fullName}'s Guestbook` : "Guestbook"}</h2>
-        <img
-          className="group_photo"
-          src={group_center ? group_center : avatar}
-          alt="group center"
-        ></img>
+        {!fullName && (
+          <img
+            className="group_photo"
+            src={group_center}
+            alt="group center"
+          ></img>
+        )}
         <form className="guestbook" onSubmit={handleSubmit}>
           <input
             type="text"
