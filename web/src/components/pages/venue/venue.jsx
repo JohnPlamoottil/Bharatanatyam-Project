@@ -28,7 +28,11 @@ const Venue = () => {
       <section className="questions">
         <h2 className="title_FAQ">Venue (Date & Location)</h2>
         <div>
-          <img className="trio" src={tillana_venue} alt="amarya rose jenna" />
+          <img
+            className="tillana_group"
+            src={tillana_venue}
+            alt="group center"
+          />
         </div>
         <button className="accordion" onClick={handleClick}>
           Save the Date
@@ -133,11 +137,7 @@ const Venue = () => {
           </div>
         </div>
       </section>
-      <img
-        className="botton__group__photo__venue"
-        src={trio}
-        alt="group center"
-      ></img>
+      <img className="trio" src={trio} alt="amarya rose jenna"></img>
       <Navigation />
       <Footer />
     </div>
