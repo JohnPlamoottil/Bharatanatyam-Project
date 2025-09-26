@@ -34,11 +34,14 @@ const Instructor = () => {
             Soorya Dance School
           </h2>
           <div className="instructor__image-container"></div>
-          <img
-            className="instructor_with_girls"
-            src={instructor_with_girls}
-            alt="instructor_with_girls"
-          />
+          <div className="center-image">
+            <img
+              className="instructor_with_girls"
+              src={instructor_with_girls}
+              alt="instructor_with_girls"
+            />
+          </div>
+
           <button className="accordion_program" onClick={handleClick}>
             Instructor - Biography <br />
             (click to open) <br />
@@ -129,7 +132,7 @@ const Instructor = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referralpolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                  className="campus__parking-instructor"
+                  className="thank_you_by_instructor"
                 ></iframe>
               </div>
             </div>

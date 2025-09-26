@@ -19,13 +19,19 @@
 }
 .onstage {
   width: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .instructor_with_girls_onstage {
-  width: 100%;
+  width: 57%;
+  text-align: center;
+  margin-bottom: 54px;
 }
 
 .instructor_with_girls {
-  width: 100%;
+  width: 55%;
+  text-align: center;
 }
 .guru_second {
   width: 55%;
@@ -34,7 +40,6 @@
 .center-image {
   display: flex;
   justify-content: center;
-
   text-align: center;
 }
 
@@ -43,9 +48,9 @@
   justify-content: space-between;
   align-items: center;
 }
-.campus__parking-instructor {
-  width: 702px;
-  height: 414px;
+.thank_you_by_instructor {
+  width: 92%;
+  height: 101%;
   position: absolute;
   text-align: center;
   left: -4px;
@@ -73,12 +78,16 @@
   .instructor__image-container {
     flex-direction: column;
   }
-
-  .guru_second {
-    width: 77%;
+  .instructor_with_girls {
+    width: 100%;
     text-align: center;
   }
-  .campus__parking-instructor {
+  .guru_second {
+    width: 100%;
+    text-align: center;
+    margin-top: 18px;
+  }
+  .thank_you_by_instructor {
     width: 306px;
     height: 266px;
     left: -1px;
