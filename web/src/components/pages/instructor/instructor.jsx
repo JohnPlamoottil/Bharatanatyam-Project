@@ -42,9 +42,8 @@ const Instructor = () => {
             />
           </div>
 
-          <button className="accordion_program" onClick={handleClick}>
-            Instructor - Biography <br />
-            (click to open) <br />
+          <button className="accordion" onClick={handleClick}>
+            Instructor - Biography
           </button>
           <div className="panel_program">
             <p className="accordion-text">
@@ -82,9 +81,8 @@ const Instructor = () => {
             </p>
           </div>
 
-          <button className="accordion_program" onClick={handleClick}>
-            Nattuvangam <br />
-            (click to open)
+          <button className="accordion" onClick={handleClick}>
+            Nattuvangam
           </button>
           <div className="panel_program">
             <p className="accordion-text">
