@@ -76,7 +76,7 @@
   height: 100%;
 }
 .video-frame_venue {
-  width: 100%;
+  width: 93%;
   height: auto;
   display: block;
 }
@@ -116,12 +116,16 @@
   height: 100%;
   border: none;
 }
-.bottom__group__photo__venue {
-  width: 95%;
-  margin: 19px -57px 16px 14px;
+.tillana_group {
+  width: 89%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
 }
 .trio {
-  width: 95%;
+  width: 29%;
   display: flex;
   justify-content: center;
   align-self: center;
