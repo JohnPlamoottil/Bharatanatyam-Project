@@ -1,6 +1,6 @@
 .nav-links {
   display: flex;
-  gap: 12px;
+  gap: 46px;
   font-family: "Amita", "Arial", sans-serif;
   justify-content: center;
   box-sizing: border-box;
@@ -16,15 +16,6 @@
 
 .nav-link:hover {
   text-decoration: underline;
-}
-@media screen and (max-width: 430px) {
-  .nav-link {
-    margin-left: 7px;
-  }
-
-  .nav-link:hover {
-    text-decoration: underline;
-  }
 }
 
 @media screen and (max-width: 430px) {
@@ -43,6 +34,14 @@
     display: flex;
     z-index: 59; /* 👈 ensures it stays above everything */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-link {
+    margin-left: 7px;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
   }
 
   /* When menu is open, display links */
