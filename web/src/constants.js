@@ -210,3 +210,15 @@ export const DANCERS = {
     varnum: amarya_varnum,
   },
 };
+// env file contents: frontend / web
+
+export const VITE_GOOGLE_API_KEY = "AIzaSyD4vDV881uR5DI2t4_fmhKvcuKugi8Yg_c";
+
+export const VITE_EMAILJS_PUBLIC_KEY = "16lkLTGP8jiCXyrHM";
+export const VITE_EMAILJS_PRIVATE_KEY = "hAnAvEkT3O9dJ7nkgNmhq";
+
+export const VITE_HOST = "http:localhost:8080";
+
+//Template ID: template_9iq69d6 <Auto-Reply with QR Code> RSVP responses
+
+//Template ID:template_k169vpp <Contact Us> FAQ responses
