@@ -8,8 +8,9 @@ import venue from "../../../assets/venue.png";
 import frameImage from "../../../assets/macbookpro.png";
 import tillana_venue from "../../../assets/tillana_venue.png";
 import trio from "../../../assets/trio.png";
+import { VITE_GOOGLE_API_KEY } from "../../../constants";
 
-const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+const apiKey = VITE_GOOGLE_API_KEY;
 
 const Venue = () => {
   function handleClick(e) {
