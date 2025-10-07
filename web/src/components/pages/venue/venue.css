@@ -180,3 +180,9 @@
 @media screen and (max-width: 768px) {
   /* iPad screen */
 }
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 1280px) {
+  /*default */
+}
