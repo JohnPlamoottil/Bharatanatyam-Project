@@ -6,7 +6,6 @@ import green_varnum_corner from "../../../assets/green_varnum_corner.png";
 import Navigation from "../../navigation-links/navigation-links";
 import "../../../vendor/fonts.css";
 import { Link, BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import dance_bkgd from "../../../assets/dance_bkgd.png";
 import qr_code from "../../../assets/qr_code.png";
 import qr_code_two from "../../../assets/qr_code_two.jpg";
 
@@ -17,11 +16,6 @@ function Home() {
     <>
       <div>
         <div className="dance_bkgd_outer_box">
-          <img
-            className="dance_bkgd"
-            src={dance_bkgd}
-            alt="white bkgd with 4 shadow dancers"
-          ></img>
           <Navigation />;{/* Dropdown Icon */}
         </div>
 
