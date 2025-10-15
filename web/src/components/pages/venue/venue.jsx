@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../../navigation-links/navigation-links";
 import "./venue.css";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
 import Footer from "../../footer/footer";
 import June2025 from "../../../assets/June2025.jpg";
 import venue from "../../../assets/venue.png";
@@ -103,8 +103,9 @@ const Venue = () => {
                 style={{ width: "100%", height: "100%" }}
                 zoom={15}
                 center={{ lat: 42.354492334658644, lng: -88.01122761349113 }}
+                mapId="2f2b36b07486a7e7bcc92e16"
               >
-                <Marker
+                <AdvancedMarker
                   position={{
                     lat: 42.354492334658644,
                     lng: -88.01122761349113,
