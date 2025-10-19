@@ -254,7 +254,7 @@
   /* Show burger icon */
   .header-top {
     flex-direction: row;
-    justify-content: flex-start; /* Align to the left */
+    justify-content: center; /* Align to the left */
     align-items: right;
     gap: 16px; /* Space between burger and text */
   }
