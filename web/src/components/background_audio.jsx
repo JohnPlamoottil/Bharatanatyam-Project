@@ -3,15 +3,19 @@ import React, { useEffect, useRef } from "react";
 const BackgroundAudio = () => {
   const audioRef = useRef(null);
 
+  // 🎚️ Initialize volume
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.01; // Set volume between 0.0 and 1.0
+      audioRef.current.volume = 0.01; // Set background volume between 0.0 and 1.0
     }
   }, []);
 
+  // 🖱️ Auto play on first click (bypass browser autoplay restrictions)
   useEffect(() => {
     function handleClick() {
-      audioRef.current.play();
+      if (audioRef.current && audioRef.current.paused) {
+        audioRef.current.play().catch(() => {});
+      }
     }
 
     document.addEventListener("click", handleClick);
