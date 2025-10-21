@@ -201,6 +201,13 @@
 
 /* Responsive: <= 768px - tablet adjustments */
 @media screen and (max-width: 768px) {
+  .nav-links {
+    gap: 0.5%;
+    font-size: 1rem;
+  }
+  .main_title_bar {
+    padding: 5% 5%;
+  }
   .auditorium__venue {
     float: none;
     display: flex;
