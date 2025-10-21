@@ -40,13 +40,6 @@ const Orchestra = () => {
               alt="deepu vocalist"
             />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             Melodious Vocals by Deepu Karunakaran is a Diploma holder in
             Carnatic Music and Violin from the Kalakshetra Foundation. He
             started learning music at the age of 5 under Guru Janardhanan Potty.
@@ -78,11 +71,6 @@ const Orchestra = () => {
             <br />
             <img className="musician" src={Kiran_R_Pai} alt="deepu vocalist" />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             Kiran R. Pai is a B-HIGH graded mridangam artist from All India
             Radio Chennai. He began his journey of learning mridangam from the
             institution Kalabhavan in Cochin. He later received advanced
@@ -94,8 +82,10 @@ const Orchestra = () => {
             guidance of Sri. Neyveli R. Narayanan. He has achieved awards for
             the Best Mridangam Accompaniment from the Spirit of Youth and the
             HCL Best Concert Award from the Music Academy. He also won the CCRT
-            Scholarship for Junior Artists from the Ministry of Culture. <br />
-            Please join me in recognizing Sri Kiran R. Pai. <br />
+            Scholarship for Junior Artists from the Ministry of Culture.
+            <br />
+            Please join me in recognizing Sri Kiran R. Pai.
+            <br />
           </p>
         </div>
         <button className="accordion" onClick={handleClick}>
@@ -111,12 +101,6 @@ const Orchestra = () => {
               alt="deepu vocalist"
             />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             Sri Rijesh Gopalakrishnan started learning violin and vocals under
             the tutelage of his father Gopalakrishnan Cheruvila at the age of 4.
             He started performing at the age of 8 and simultaneously learned
@@ -126,8 +110,10 @@ const Orchestra = () => {
             international festivals such as the Konark Festival, Soorya
             Festival, and Khajhraho Festival. He has visited countries such as
             Singapore, Malaysia, Japan, and the United States to name a few. He
-            has also been performing for the past 20 years. <br />
-            Please join me in recognizing Sri Rijesh Gopalakrishnan <br />
+            has also been performing for the past 20 years.
+            <br />
+            Please join me in recognizing Sri Rijesh Gopalakrishnan
+            <br />
           </p>
         </div>
         <button className="accordion" onClick={handleClick}>
@@ -142,12 +128,6 @@ const Orchestra = () => {
               src={Preyesh_Mampoyil_Kudiru_Parambu}
               alt="deepu vocalist"
             />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <br />
             Preyesh Mampoyil Kudiru Parambu is a passionate Carnatic flautist
             and a disciple of Vidwan Shri Shailesh Ramamurthy. An alumnus of
@@ -167,6 +147,7 @@ const Orchestra = () => {
             band led by Mr. Khalil Ghadri. Beyond performing, Preyesh has
             composed several musical albums. He is currently based in the UAE
             and performs regularly in India and abroad. <br />
+            <br />
             Please join me in recognizing Sri Preyesh Mampoyil Kudiru Parambu{" "}
             <br />
           </p>
