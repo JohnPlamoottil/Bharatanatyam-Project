@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: 1px dotted red;
-} */
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -235,8 +235,7 @@
     margin-right: 0px;
   }
   .Footer-Middle {
-    color: gold;
-    font-size: 10px;
+    font-size: 14px;
   }
   .clc__venue {
     width: 80%;
