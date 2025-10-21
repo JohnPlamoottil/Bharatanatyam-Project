@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 1px dotted red;
-}
+} */
 .footer {
   display: flex;
   flex-direction: column;
@@ -188,7 +188,7 @@
 
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding: 0 18px;
+    padding: 0 0px;
     background-color: rgb(67, 63, 63);
     overflow: hidden;
     max-height: 0;
