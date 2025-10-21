@@ -59,7 +59,7 @@ const Venue = () => {
             James Lumber Center for the Performing Arts <br />
             Performing Arts Theater in Grayslake, Illinois <br />
             College of Lake County Grayslake Campus <br />
-            Address: 19351 W Washington St, Grayslake, IL 60030 <br />
+            Address: 19351 W Washington St <br /> Grayslake, IL 60030 <br />
             Phone: (847) 543-2300
             <img className="auditorium__venue" src={venue} alt="auditorium" />
           </p>
@@ -125,16 +125,14 @@ const Venue = () => {
           </p>
           <div className="video-wrapper__venue">
             <img src={frameImage} alt="Frame" className="video-frame_venue" />
-            <div className="laptop-video-overlay"></div>
-            <div className="laptop-video-overlay__venue">
-              <iframe
-                src="https://www.youtube.com/embed/9MvIhi4PLPo?si=Aw-tHk9SDCkkPj9R"
-                title="Direction to Venue"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="campus__parking"
-              ></iframe>
-            </div>
+
+            <iframe
+              src="https://www.youtube.com/embed/9MvIhi4PLPo?si=Aw-tHk9SDCkkPj9R"
+              title="Direction to Venue"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="campus__parking"
+            ></iframe>
           </div>
         </div>
       </section>
