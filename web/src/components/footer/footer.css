@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: 1px dotted red;
-} */
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -71,46 +71,6 @@
   font-family: "Amita", cursive;
 }
 
-/* @keyframes pulsate {
-  0% {
-    opacity: 0;
-    box-shadow: 0 0 0 0 rgb(183, 196, 213);
-  }
-  50% {
-    opacity: 0.6;
-    box-shadow: 0 0 0 50px rgb(98, 138, 189);
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-    box-shadow: 0 0 0 100px rgba(47, 128, 237);
-  }
-} */
-
-/* .about__circle {
-  width: 426px;
-  height: 426px;
-  border-radius: 1351%;
-  background-color: gold;
-  position: absolute;
-  top: -152px;
-  left: -350px;
-  z-index: 1;
-} */
-
-.about__circle_animation_blurred {
-  animation: pulsate 1.3s ease-in-out infinite both;
-}
-
-.facebook-link svg {
-  transition: transform 0.2s ease;
-}
-.facebook-link:hover svg {
-  transform: scale(1.1);
-}
-.youtube-link {
-  /* margin-left: 34px; */
-}
 .soorya_studio {
   width: 300px;
   height: 300px;
@@ -138,6 +98,7 @@
 }
 .clc__venue {
   width: 64%;
+  margin-top: 100px;
 }
 .Contact_Us {
   font-family: "Amita", cursive;
@@ -147,27 +108,6 @@
   gap: 117px;
 }
 
-@media screen and (max-width: 1179px) {
-  /* .footer {
-    flex-direction: column;
-  } */
-  .FooterMidde_momsdaughter_clcvenue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .moms_and_daughters {
-    width: 95%;
-  }
-  .Footer-Middle {
-    font-size: 18px;
-  }
-  .clc__venue {
-    width: 64%;
-    margin-top: 100px;
-  }
-}
 @media screen and (max-width: 768px) {
   /* ipad */
   .footer {
@@ -175,6 +115,14 @@
   }
   .moms_and_daughters {
     width: 95%;
+  }
+  .soorya_studio {
+    width: 150px;
+    height: 150px;
+  }
+  .auditorium__footer {
+    width: 150px;
+    height: 150px;
   }
 }
 @media screen and (max-width: 430px) {
@@ -248,33 +196,6 @@
     font-family: "Amita", cursive;
   }
 
-  /* @keyframes pulsate {
-    0% {
-      opacity: 0;
-      box-shadow: 0 0 0 0 rgb(213, 213, 183);
-    }
-    50% {
-      opacity: 0.6;
-      box-shadow: 0 0 0 50px rgb(189, 172, 98);
-    }
-    100% {
-      transform: scale(1.2);
-      opacity: 0;
-      box-shadow: 0 0 0 100px rgba(221, 227, 40, 0.53);
-    }
-  }
-
-  .about__circle {
-    width: 426px;
-    height: 426px;
-    border-radius: 1351%;
-    background-color: gold;
-    position: absolute;
-    top: -152px;
-    left: -350px;
-    z-index: 1;
-  } */
-
   .about__circle_animation_blurred {
     animation: pulsate 1.3s ease-in-out infinite both;
   }
@@ -334,16 +255,5 @@
     flex-direction: row;
     gap: 79px;
     justify-content: center;
-  }
-}
-@media screen and (max-width: 390px) {
-  .footer {
-    flex-direction: column;
-  }
-  .moms_and_daughters {
-    width: 95%;
-  }
-  .class-location {
-    color: gold;
   }
 }
