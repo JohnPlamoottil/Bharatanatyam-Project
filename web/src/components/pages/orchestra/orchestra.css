@@ -117,6 +117,10 @@
     opacity: 0.75;
   }
 
+  .panel {
+    margin: 0 auto;
+  }
+
   .accordion-text {
     color: gold;
     padding: 1rem;
