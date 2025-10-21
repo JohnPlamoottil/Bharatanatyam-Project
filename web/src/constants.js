@@ -61,7 +61,7 @@ export const DANCERS = {
               It’s something that brings her joy and helps her be her true self. 
               Today’s Arangetram represents a significant milestone in her life, a celebration of her hard work, 
               passion for the art, and heartfelt gratitude to her teacher, family, and all who have supported 
-              her along the way. `,
+              her along the way.`,
     shishya: `Watching Michelle grow into the graceful, confident young woman
               she is today has been one of our greatest joys. From her first
               dance class at age six to this day, her Arangetram, we have seen
@@ -76,6 +76,7 @@ export const DANCERS = {
               you. May you continue to dance through life with the same joy and
               purpose. 
               — With love, Amma and Appa`,
+
     mother_daughter: mom_michelle,
     dance_title: `Keerthanam`,
     solo_duration: `Michelle Eapen - 16min`,
@@ -114,7 +115,7 @@ export const DANCERS = {
     shishya: `Watching our Andrea grow has been one of the greatest joys of our lives. From her earliest days, she has carried a quiet strength and a soft heart — gentle in nature, yet bold in spirit. She is calm and composed in public, but in the company of those she loves, her playful, mischievous side shines through. Among her closest friends, she is loud, confident, and full of life — never afraid to speak her mind and lift others up.
               She gives selflessly, often putting others’ happiness before her own. Whether it's a toy, time, or a piece of her favorite treat, she never hesitates to share. At home, she’s the cool big sister — teasing, laughing, and playing endlessly with her little brother, finding joy in simply being with him (and often in annoying him too!). She is soft-spoken but firm, kind but fearless — a beautiful balance that makes her truly special.
               Dance has been a constant in her life — a space where her inner world comes alive. Over the years, it has helped her find grace, discipline, and deep connection to tradition. Through every movement and every expression, we see her love for the art and the quiet dedication behind it.
-              As parents, we feel truly blessed to watch her grow into the young woman she is — full of heart, full of spirit, and full of promise.
+              As parents, we feel truly blessed to watch her grow into the young woman she is full of heart, full of spirit, and full of promise.
               With love and pride,
               Appa & Amma`,
     mother_daughter: mom_andrea,
@@ -175,7 +176,7 @@ export const DANCERS = {
     mother_daughter: mom_jenna,
     dance_title: `Keerthanam`,
     solo_duration: `Jenna J Plamoottil - 10min`,
-    solo: `This is a Christian composition based on the famous Malayalam poem "Magdalena Mariam", written by Mahakavi Vallathol Narayana Menon. The piece highlights the early part of Mary Magdalene's life, focusing on her past as a sinner. It depicts the powerful moment when Mary is brought before Jesus after being condemned and stoned by the crowd. As Jesus begins to write on the ground with his finger, he turns the judgment back on the accusers, saying, "Let him who is without sin cast the first stone." This act of mercy and justice marks a pivotal moment in Mary's life, leading her to repentance as she surrenders at Jesus's feet. The item beautifully portrays Mary’s transformation, capturing the depth of her remorse and the grace of forgiveness granted by Christ. Through expressive movements, the dancer conveys Mary’s inner struggle, her redemption, and the purity of Jesus's compassion. Set in Ragamalika and Talamalika`,
+    solo: `This is a Christian composition based on the famous Malayalam poem "Magdalena Mariam", written by Mahakavi Vallathol Narayana Menon. Set in Ragamalika and Talamalika. The piece highlights the early part of Mary Magdalene's life, focusing on her past as a sinner. It depicts the powerful moment when Mary is brought before Jesus after being condemned and stoned by the crowd. As Jesus begins to write on the ground with his finger, he turns the judgment back on the accusers, saying, "Let him who is without sin cast the first stone." This act of mercy and justice marks a pivotal moment in Mary's life, leading her to repentance as she surrenders at Jesus's feet. The item beautifully portrays Mary’s transformation, capturing the depth of her remorse and the grace of forgiveness granted by Christ. Through expressive movements, the dancer conveys Mary’s inner struggle, her redemption, and the purity of Jesus's compassion.`,
     solo_photo: jenna_solo,
     invite: jenna_invitation,
     rsvp: "confirm",

@@ -14,12 +14,13 @@ import Dancer from "./components/pages/dancer/dancer";
 import Navigation from "./components/navigation-links/navigation-links";
 import ScrollToTop from "./components/scroll_to_top";
 import ComingSoon from "./components/coming_soon/coming_soon";
-
+import BackgroundAudio from "./components/background_audio";
 import Gallery from "./components/pages/gallery/gallery.jsx";
 
 export default function App() {
   return (
     <Router>
+      <BackgroundAudio />
       <ScrollToTop />
 
       <Routes>

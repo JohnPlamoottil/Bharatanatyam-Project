@@ -12,16 +12,83 @@ import trio from "../../../assets/trio.png";
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 const Venue = () => {
+  React.useEffect(() => {
+    // Handle clicks outside of accordion
+    function handleOutsideClick(e) {
+      // Only close if click is outside any accordion or panels
+      if (
+        !e.target.closest(".accordion") &&
+        !e.target.closest(".panel") &&
+        !e.target.closest(".map__panel")
+      ) {
+        const allPanels = document.querySelectorAll(".panel, .map__panel");
+        const allButtons = document.querySelectorAll(".accordion");
+
+        // Close all panels and remove slide class
+        allPanels.forEach((panel) => (panel.style.maxHeight = null));
+        allButtons.forEach((button) => button.classList.remove("slide"));
+      }
+    }
+
+    // Add click listener to document
+    document.addEventListener("click", handleOutsideClick);
+
+    // Cleanup on unmount
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
+
+  // Setup YT player for campus iframe to control background audio
+  React.useEffect(() => {
+    function setupVenuePlayer() {
+      if (!(window.YT && window.YT.Player)) return;
+      const player = new window.YT.Player("venue-yt", {
+        events: {
+          onStateChange: (e) => {
+            const controller = window.BackgroundAudioController;
+            if (!controller) return;
+            if (e.data === window.YT.PlayerState.PLAYING) controller.pause();
+            else if (
+              e.data === window.YT.PlayerState.PAUSED ||
+              e.data === window.YT.PlayerState.ENDED
+            )
+              controller.play();
+          },
+        },
+      });
+      return () => {
+        try {
+          player && player.destroy && player.destroy();
+        } catch {
+          /* ignore */
+        }
+      };
+    }
+
+    if (window.YT && window.YT.Player) setupVenuePlayer();
+    else window.onYouTubeIframeAPIReady = setupVenuePlayer;
+  }, []);
+
   function handleClick(e) {
-    const button = e.target;
-    button.classList.toggle("slide");
-    const panel = button.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
+    e.stopPropagation(); // Prevent outside click handler from firing
+
+    const button = e.currentTarget;
+    const isOpen = button.classList.contains("slide");
+
+    // Close all other panels first
+    const allPanels = document.querySelectorAll(".panel, .map__panel");
+    const allButtons = document.querySelectorAll(".accordion");
+
+    allPanels.forEach((panel) => (panel.style.maxHeight = null));
+    allButtons.forEach((btn) => btn.classList.remove("slide"));
+
+    // If this panel wasn't open, open it
+    if (!isOpen) {
+      const panel = button.nextElementSibling;
+      button.classList.add("slide");
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   }
+
   return (
     <div className="venue_content">
       <Navigation />
@@ -127,10 +194,10 @@ const Venue = () => {
             <img src={frameImage} alt="Frame" className="video-frame_venue" />
 
             <iframe
-              src="https://www.youtube.com/embed/9MvIhi4PLPo?si=Aw-tHk9SDCkkPj9R"
+              id="venue-yt"
+              src="https://www.youtube.com/embed/9MvIhi4PLPo?si=Aw-tHk9SDCkkPj9R&enablejsapi=1&modestbranding=1&rel=0"
               title="Direction to Venue"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
               className="campus__parking"
             ></iframe>
           </div>

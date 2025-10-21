@@ -2,31 +2,72 @@ import React from "react";
 import Navigation from "../../navigation-links/navigation-links";
 import "./orchestra.css"; // optional for styling
 import Footer from "../../footer/footer";
-import dances_india from "../../../assets/dances_india.png";
+import orchestra_happy from "../../../assets/orchestra_happy.png";
 import Deepu_Karunakaran from "../../../assets/Deepu_Karunakaran.jpg";
 import Kiran_R_Pai from "../../../assets/Kiran_R_Pai.jpg";
+import drummer from "../../../assets/drummer.png";
 import Sri_Rijesh_Gopalakrishnan from "../../../assets/Sri_Rijesh_Gopalakrishnan.jpg";
 import Preyesh_Mampoyil_Kudiru_Parambu from "../../../assets/Preyesh_Mampoyil_Kudiru_Parambu.jpg";
+import dances_india from "../../../assets/dances_india.png";
+import orchestra_serious from "../../../assets/orchestra_serious.png";
+
 // import ComingSoon from "../../coming_soon/coming_soon"; available full time
 
 const Orchestra = () => {
+  React.useEffect(() => {
+    // Handle clicks outside of accordion
+    function handleOutsideClick(e) {
+      // Only close if click is outside any accordion or panel
+      if (!e.target.closest(".accordion") && !e.target.closest(".panel")) {
+        const allPanels = document.querySelectorAll(".panel");
+        const allButtons = document.querySelectorAll(".accordion");
+
+        // Close all panels and remove slide class
+        allPanels.forEach((panel) => (panel.style.maxHeight = null));
+        allButtons.forEach((button) => button.classList.remove("slide"));
+      }
+    }
+
+    // Add click listener to document
+    document.addEventListener("click", handleOutsideClick);
+
+    // Cleanup on unmount
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
+
   function handleClick(e) {
-    const button = e.target;
-    button.classList.toggle("slide");
-    const panel = button.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
+    e.stopPropagation(); // Prevent outside click handler from firing
+
+    const button = e.currentTarget;
+    const isOpen = button.classList.contains("slide");
+
+    // Close all other panels first
+    const allPanels = document.querySelectorAll(".panel");
+    const allButtons = document.querySelectorAll(".accordion");
+
+    allPanels.forEach((panel) => (panel.style.maxHeight = null));
+    allButtons.forEach((btn) => btn.classList.remove("slide"));
+
+    // If this panel wasn't open, open it
+    if (!isOpen) {
+      const panel = button.nextElementSibling;
+      button.classList.add("slide");
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   }
+
   // const orchestraContent = (
   return (
     <div>
       <Navigation />
 
-      <section className="questions">
+      <section className="main_title_bar">
         <h2 className="title_FAQ">The Four Musicians (Orchestra)</h2>
+        <img
+          className="musicians_group_photo_happy"
+          src={orchestra_happy}
+          alt="photo of 4 musicians at the show"
+        ></img>
         <button className="accordion" onClick={handleClick}>
           Vocals - Sri.Deepu Karunakaran
         </button>
@@ -83,6 +124,11 @@ const Orchestra = () => {
             the Best Mridangam Accompaniment from the Spirit of Youth and the
             HCL Best Concert Award from the Music Academy. He also won the CCRT
             Scholarship for Junior Artists from the Ministry of Culture.
+            <img
+              className="drummer"
+              src={drummer}
+              alt="photo of Kiran drumming at show"
+            ></img>
             <br />
             Please join me in recognizing Sri Kiran R. Pai.
             <br />
@@ -202,6 +248,11 @@ const Orchestra = () => {
             and powerful form of storytelling and expression.
           </strong>
         </p>
+        <img
+          className="orchestra_serious"
+          src={orchestra_serious}
+          alt="alternate photo of musicians at show"
+        ></img>
       </div>
       <Navigation />
       <Footer />

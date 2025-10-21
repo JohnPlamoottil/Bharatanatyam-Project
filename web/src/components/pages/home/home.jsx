@@ -133,7 +133,13 @@ function Home() {
           Reactivated QR Code - Share this website with others around you
         </p>
         <img className="QR_code_two" src={qr_code_two} alt="qr code"></img>
+        <p className="QR_code_description">
+          {" "}
+          Please Visit Our Bharatanatyam Journey <br />
+          Below in the Footer-Right Side
+        </p>
       </div>
+      <Navigation />
       <Footer />
     </>
   );

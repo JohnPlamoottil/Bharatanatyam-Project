@@ -6,7 +6,10 @@
   min-height: 100vh;
   align-items: center;
 }
-
+.livestream_start_direction {
+  color: gold;
+  font-family: "Amita";
+}
 .video-title {
   font-size: 2rem;
   color: gold;
@@ -61,7 +64,26 @@
   height: auto;
   display: block;
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+  .nav-link {
+    gap: 0.5%;
+    font-size: 1rems;
+  }
+
+  .video-title {
+    padding: 5% 5%;
+  }
+
+  .graduation_video2025 {
+    width: 536px;
+    height: 336px;
+    left: -9px;
+    top: -42px;
+    margin-left: 1px;
+  }
+}
+@media screen and (max-width: 430px) {
   .video-page {
     display: flex;
     flex-direction: column;
@@ -92,8 +114,4 @@
     width: 118%;
     margin-left: -32px;
   }
-}
-
-@media screen and (max-width: 768px) {
-  /* iPad screen */
 }

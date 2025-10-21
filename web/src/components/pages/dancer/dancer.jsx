@@ -16,13 +16,32 @@ const Dancer = () => {
   const dancerInfo = DANCERS[dancerName];
   console.log(DANCERS[dancerName]);
 
+  React.useEffect(() => {
+    function handleOutsideClick(e) {
+      if (!e.target.closest(".accordion") && !e.target.closest(".panel")) {
+        const allPanels = document.querySelectorAll(".panel");
+        const allButtons = document.querySelectorAll(".accordion");
+        allPanels.forEach((panel) => (panel.style.maxHeight = null));
+        allButtons.forEach((button) => button.classList.remove("slide"));
+      }
+    }
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
+
   function handleClick(e) {
-    const button = e.target;
-    button.classList.toggle("slide");
-    const panel = button.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
+    e.stopPropagation();
+    const button = e.currentTarget;
+    const isOpen = button.classList.contains("slide");
+
+    const allPanels = document.querySelectorAll(".panel");
+    const allButtons = document.querySelectorAll(".accordion");
+    allPanels.forEach((panel) => (panel.style.maxHeight = null));
+    allButtons.forEach((btn) => btn.classList.remove("slide"));
+
+    if (!isOpen) {
+      const panel = button.nextElementSibling;
+      button.classList.add("slide");
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   }
@@ -32,7 +51,7 @@ const Dancer = () => {
   return (
     <div>
       <Navigation />
-      <section className="questions">
+      <section className="main_title_bar">
         <h2 className="title_dancer">{dancerInfo.fullName}</h2>
         <div className="outer_fullpose">
           <img
@@ -45,40 +64,48 @@ const Dancer = () => {
           Shishya (Autobiography on {dancerInfo.shortName})
         </button>
         <div className="panel">
-          <p>{dancerInfo.autobio}</p>
-          <img
-            className="headshot"
-            src={dancerInfo.headshot}
-            alt="headshot"
-          ></img>
+          <div className="autobio-panel">
+            <div className="autobio-photo">
+              <img
+                className={`headshot headshot_${dancerName}`}
+                src={dancerInfo.headshot}
+                alt="headshot"
+              />
+            </div>
+            <div className="autobio-text">
+              <p>{dancerInfo.autobio}</p>
+            </div>
+          </div>
         </div>
         <button className="accordion" onClick={handleClick}>
           Shishya (Biography from Parents)
         </button>
         <div className="panel">
-          {dancerInfo.shishya}
-          <div className="outer_mother_daughter">
-            <img
-              className={`mother_daughter mom_daughter_${dancerName}`}
-              src={dancerInfo.mother_daughter}
-              alt={`Mom and ${dancerInfo.shortName}`}
-            />
+          <div className="shishya-panel">
+            <div className="shishya-photo">
+              <img
+                className={`mother_daughter mom_daughter_${dancerName}`}
+                src={dancerInfo.mother_daughter}
+                alt={`Mom and ${dancerInfo.shortName}`}
+              />
+            </div>
+            <div className="shishya-text">{dancerInfo.shishya}</div>
           </div>
         </div>
         <button className="accordion" onClick={handleClick}>
           Solo Performance
         </button>
         <div className="panel">
-          <p>{dancerInfo.dance_title}</p>
-          <p>{dancerInfo.solo_duration}</p>
-          <p>{dancerInfo.solo}</p>
-          <p>
-            <img
-              className="solo_photo"
-              src={dancerInfo.solo_photo}
-              alt="solo_photo"
-            ></img>
-          </p>
+          <div className="solo-panel">
+            <div className="solo-text">
+              <p>{dancerInfo.dance_title}</p>
+              <p>{dancerInfo.solo_duration}</p>
+              <p>{dancerInfo.solo}</p>
+            </div>
+            <div className="solo-photo">
+              <img src={dancerInfo.solo_photo} alt="solo_photo" />
+            </div>
+          </div>
         </div>
         <button className="accordion" onClick={handleClick}>
           Invitation Card
@@ -90,6 +117,7 @@ const Dancer = () => {
               src={dancerInfo.invite}
               alt="invitation"
             />
+            <br />
             Dinner to Follow After the Performance
           </p>
         </div>

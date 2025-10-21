@@ -40,9 +40,18 @@
   text-align: left;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
   margin-left: 12px;
   width: 95%;
+}
+
+.entries li {
+  padding: 1rem 0;
+  border-bottom: 1px solid gold;
+  margin-bottom: 1rem;
+}
+
+.entries li:last-child {
+  border-bottom: none;
 }
 .name_textfield {
   font-size: 5px;
@@ -93,10 +102,19 @@
     padding: 0;
     text-align: left;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #ddd;
     font-size: 19px;
     margin-left: 12px;
     width: 95%;
+  }
+
+  .entries li {
+    padding: 1rem 0;
+    border-bottom: 1px solid gold;
+    margin-bottom: 1rem;
+  }
+
+  .entries li:last-child {
+    border-bottom: none;
   }
   .name_textfield {
     width: 94%;

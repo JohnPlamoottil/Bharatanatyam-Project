@@ -66,6 +66,26 @@
   height: auto;
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+  .nav-links {
+    gap: 7.5px;
+  }
+  .competition_video2019 {
+    width: 550px;
+    height: 347px;
+    left: 78px;
+    top: 15px;
+  }
+  .reflection {
+    width: 550px;
+    height: 347px;
+    left: 78px;
+    top: 15px;
+  }
+}
+
 @media screen and (max-width: 430px) {
   .header {
     background-image: url(../../../assets/temple.png);
@@ -137,7 +157,4 @@
     height: auto;
     display: block;
   }
-}
-@media screen and (max-width: 768px) {
-  /* iPad screen */
 }

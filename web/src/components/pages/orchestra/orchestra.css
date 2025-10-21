@@ -19,6 +19,11 @@
   text-align: center;
   margin-top: 50px;
 }
+.musicians_group_photo_happy {
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+}
 
 .title_orchestra {
   font-size: 1.8rem;
@@ -53,8 +58,22 @@
   margin: 0 8px 16px;
 }
 
+.drummer {
+  display: flex;
+  margin: 0 auto;
+  width: 39%;
+}
+.orchestra_serious {
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+}
+
 /* Responsive: tablet */
 @media screen and (max-width: 768px) {
+  .main_title_bar {
+    padding: 5% 5%;
+  }
   .musician_container {
     margin: 40px 16px;
     padding: 16px;
@@ -91,6 +110,9 @@
 
   .musician {
     width: 140px;
+  }
+  .orchestra_serious {
+    width: 75%;
   }
 }
 
@@ -137,5 +159,8 @@
   .musician {
     width: 120px;
     margin-right: 8px;
+  }
+  .orchestra_serious {
+    width: 84%;
   }
 }
