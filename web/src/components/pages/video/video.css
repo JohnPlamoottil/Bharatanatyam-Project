@@ -4,7 +4,6 @@
 }
 
 .video-page {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   /* background-color: #f8f8f8; */
@@ -93,7 +92,6 @@
   }
 
   .video-page {
-    padding: 40px;
     display: flex;
     flex-direction: column;
     /* background-color: #f8f8f8; */
