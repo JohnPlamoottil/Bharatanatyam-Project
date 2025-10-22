@@ -96,7 +96,7 @@ const Livestream = () => {
     }
   }, []);
   return (
-    <div className="video-page">
+    <div className="video-footer">
       <Navigation />
       <h1 className="video-title">Our Live Performance</h1>
       <p className="livestream_start_direction">
