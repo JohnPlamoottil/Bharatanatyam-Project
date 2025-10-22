@@ -123,6 +123,9 @@
 .QR_code_two {
   width: 27%;
 }
+@media screen and (max-width: 768px) {
+  /*iPad screen looks good*/
+}
 
 @media screen and (max-width: 430px) {
   .quote-container {
