@@ -1,5 +1,4 @@
-.video-page {
-  padding: 40px;
+.video-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -40,13 +39,6 @@
   text-align: center;
   flex-grow: 1;
 }
-.outer_graduation_video2025 {
-  position: absolute;
-  top: 13.5%; /* Adjust based on frame */
-  left: 12%; /* Adjust based on frame */
-  width: 76%; /* Adjust width to match the screen */
-  height: 54%; /* Adjust height for screen window */
-}
 
 .graduation_video2025 {
   width: 757px;
@@ -67,19 +59,21 @@
 @media screen and (max-width: 768px) {
   /* iPad screen */
   .nav-links {
-    gap: 0.5%;
-    font-size: 1rems;
+    gap: 1.1%;
   }
 
   .video-title {
     padding: 5% 5%;
   }
+  .video-wrapper__livestream {
+    width: 700px;
+  }
 
   .graduation_video2025 {
-    width: 536px;
-    height: 336px;
-    left: -9px;
-    top: -42px;
+    width: 546px;
+    height: 353px;
+    left: 75px;
+    top: 8px;
     margin-left: 1px;
   }
 }
@@ -90,10 +84,6 @@
     min-height: 100vh;
   }
 
-  .video-wrapper {
-    flex: 1;
-  }
-
   .footer {
     margin-top: auto;
     text-align: center;
@@ -101,17 +91,17 @@
     background-image: url(../../../assets/temple.png);
     width: 100%;
   }
-  .graduation_video2025 {
-    width: 129%;
-    height: 146%;
-    position: relative;
-    text-align: center;
-    left: -39px;
-    top: -28px;
-    border: none;
-  }
   .video-frame_livestream {
-    width: 118%;
-    margin-left: -32px;
+    width: 400px;
+  }
+  .video-wrapper__livestream {
+    width: 400px;
+  }
+  .graduation_video2025 {
+    width: 77%;
+    height: 80%;
+    top: 10px;
+    right: 56px;
+    left: 45px;
   }
 }
