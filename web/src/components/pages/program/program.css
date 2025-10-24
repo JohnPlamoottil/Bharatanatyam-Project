@@ -1,0 +1,112 @@
+.main_title_bar {
+  max-width: 880px;
+  padding: 0 0;
+  margin: 0 auto;
+}
+.title_Program {
+  text-align: center;
+  font-family: "Amita", cursive;
+  margin-top: 58px;
+  color: gold;
+  background-color: black;
+  background-position: relative;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion_program {
+  font-family: "Amita", cursive;
+  font-size: 24px;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: black;
+  color: gold;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+}
+.accordion::before {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.slide::before {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.slide,
+.accordion:hover {
+  background-color: black;
+}
+.sidenote {
+  background-color: black;
+  font-family: "Amita", cursive;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel_program {
+  padding: 0 18px;
+  background-color: black;
+  color: gold;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  font-family: "Amita", cursive;
+}
+.refer {
+  color: white;
+}
+.varnum_group_performance {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+}
+.audience {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 50%;
+}
+.firedrill {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  padding: 50px 50px;
+}
+@media screen and (max-width: 768px) {
+  /* iPad screen */
+  .audience {
+    width: 55%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .panel_program {
+    padding: 0 18px;
+    background-color: black;
+    color: gold;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    font-family: "Amita", cursive;
+  }
+  .refer {
+    color: white;
+  }
+}

@@ -1,0 +1,212 @@
+/* * {
+  outline: 1px dotted red;
+} */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Amita", cursive;
+  font-size: 16px;
+  background-color: black;
+  margin-top: 72px;
+}
+.footer__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Amita", cursive;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+.footer__text {
+  text-align: center;
+}
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-item {
+  width: max-content;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.accordion::before {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: brown;
+  float: right;
+  margin-left: 5px;
+}
+
+.slide::before {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.slide,
+.accordion:hover {
+  background-color: #ccc;
+  color: brown;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #ccc;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  font-family: "Amita", cursive;
+}
+
+.soorya_studio {
+  width: 300px;
+  height: 300px;
+}
+.auditorium__footer {
+  width: 300px;
+  height: 300px;
+}
+.moms_and_daughters {
+  width: 95%;
+  margin-top: 10px;
+}
+.left_side_block_footer {
+  margin-right: 0px;
+}
+.class-location-title {
+  color: gold;
+}
+.class-location {
+  color: gold;
+}
+.Footer-Middle {
+  font-size: 20px;
+  color: gold;
+}
+.clc__venue {
+  width: 64%;
+  margin-top: 100px;
+}
+.Contact_Us {
+  font-family: "Amita", cursive;
+  color: gold;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 79px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* ipad */
+
+  .moms_and_daughters {
+    width: 102%;
+    margin-top: -34px;
+  }
+  .clc__venue {
+    width: 100%;
+    margin-top: 46px;
+  }
+  .soorya_studio {
+    width: 150px;
+    height: 150px;
+  }
+  .auditorium__footer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social {
+    gap: 39px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .footer {
+    text-align: center;
+    font-size: 0.95rem;
+    gap: 1rem;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 15%;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+  }
+  .Contact_Us {
+    font-family: "Amita", cursive;
+    color: gold;
+  }
+  .footer__text {
+    text-align: center;
+    background-image: url(../../../assets/temple.png);
+  }
+
+  .box-container {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .accordion::before {
+    color: white;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .slide,
+  .accordion:hover {
+    background-color: #302c2cb7;
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 0px;
+    background-color: rgb(67, 63, 63);
+  }
+  .about__circle_animation_blurred {
+    animation: pulsate 1.3s ease-in-out infinite both;
+  }
+  .facebook-link svg {
+    transition: transform 0.2s ease;
+  }
+  .facebook-link:hover svg {
+    transform: scale(1.1);
+  }
+  .soorya_auditorium {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .moms_and_daughters {
+    width: 80%;
+    max-width: 373px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: contain;
+  }
+  .Footer-Middle {
+    font-size: 14px;
+  }
+  .clc__venue {
+    width: 80%;
+    margin-top: 45px;
+  }
+  .class-location-title {
+    margin-left: 3px;
+  }
+  .class-location {
+    margin-left: 0px;
+  }
+}

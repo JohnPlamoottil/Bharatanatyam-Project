@@ -1,0 +1,32 @@
+.gallery-directions {
+  font-family: "Amita";
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.upload-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.gallery-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Amita";
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.gallery-button:hover {
+  background-color: #005bbb;
+}
+@media screen and (max-width: 430px) {
+  .upload-box {
+    flex-direction: column;
+  }
+}

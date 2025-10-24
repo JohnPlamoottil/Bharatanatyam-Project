@@ -1,0 +1,169 @@
+.journey {
+  font-size: 1.9rem;
+  text-align: right;
+  background-image: url(../assets/Temple.png);
+}
+
+.home_group_photo {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center; /* avoid stretching children vertically */
+  width: 86%;
+  max-width: 100%;
+  height: auto; /* avoid forcing full height which can stretch images */
+  transform: rotate(9deg);
+}
+.burger_icon {
+  /* display: flex;
+  justify-content: center; */
+  font-size: 24px;
+  margin-left: 8px;
+  color: gold;
+}
+.dropdown {
+  font-family: "Amita", cursive;
+  font-size: 30px;
+  color: gold;
+  background-color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.dancers {
+  z-index: 100;
+}
+
+.dropdown-text {
+  margin: 0;
+  font-family: "Amita", cursive;
+  font-size: 25px;
+}
+
+.quote-container {
+  flex-direction: row;
+  max-width: 800px;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  border-left: 4px solid #f6ff00;
+  font-family: "Amita", cursive;
+  text-align: center;
+  margin: 0 auto;
+  /* width: 100%; */
+  font-size: 40px;
+  text-align: center;
+  /* padding-right: 500px; */
+  /* padding-left: 500px; */
+  opacity: 93%;
+}
+
+.quote {
+  font-family: "Amita", cursive;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-meaning {
+  font-family: "Amita", cursive;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.quote-author-one {
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  font-family: "Amita", cursive;
+}
+
+.quotetwo {
+  font-family: "Amita", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-author-two {
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+}
+
+.QR_code_description {
+  font-family: "Amita", cursive;
+  font-size: 25px;
+  color: gold;
+  text-align: center;
+}
+.QR_code_outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.QR_code_one {
+  width: 27%;
+}
+.QR_code_two {
+  width: 27%;
+}
+@media screen and (max-width: 768px) {
+  /*iPad screen looks good*/
+}
+
+@media screen and (max-width: 430px) {
+  .quote-container {
+    padding: 0.5rem;
+    border: 3px solid gold;
+    margin: 0 1rem;
+  }
+  .quote {
+    font-size: 16px;
+    color: gold;
+  }
+
+  .quote-meaning {
+    font-size: 10px;
+    color: gold;
+  }
+
+  .quote-author-one {
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+    color: gold;
+    font-family: "Amita", cursive;
+    margin-right: 20px;
+  }
+
+  .quotetwo {
+    text-align: center;
+    font-size: 10px;
+    color: gold;
+    margin: 0 20px; /*top right bottom left */
+  }
+
+  .quote-author-two {
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+    color: gold;
+    margin-right: 20px;
+  }
+}
