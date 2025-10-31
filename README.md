@@ -5,6 +5,6 @@
 # Deployed Website 
 
 Final Project Design: [Dance Website - Samarpanam](https://arangetram2025.onrender.com/)
-## Getting started / Startup instructions
+
 
 
