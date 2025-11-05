@@ -12,6 +12,8 @@ const mongoose = require("mongoose");
 const cloudinary = require("cloudinary").v2;
 const { Message, Image, Video } = require("./messages");
 
+import router from "./routes/videoRoutes";
+
 const app = express();
 const PORT = 8080;
 
@@ -55,6 +57,8 @@ app.get("/api/message", async (req, res) => {
   const messages = await Message.find({}).sort({ createdAt: "desc" });
   res.status(200).json({ messages });
 });
+
+app.use(router);
 
 app.post("/api/message", async (req, res) => {
   const { dancerName, name, content } = req.body;
@@ -604,35 +608,35 @@ app.get("/api/images/:category", async (req, res) => {
   }
 });
 
-// GET videos by specific category
-app.get("/api/videos/:category", async (req, res) => {
-  try {
-    const { category } = req.params;
-    console.log(`Fetching videos for category: ${category}`);
+// GET videos by specific category ALREADY ORGANIZED IN A FOLDER
+// app.get("/api/videos/:category", async (req, res) => {
+//   try {
+//     const { category } = req.params;
+//     console.log(`Fetching videos for category: ${category}`);
 
-    const videos = await Video.find({ category })
-      .lean()
-      .limit(50)
-      .select(
-        "name content category cloudinaryUrl contentType originalName uploadedAt"
-      );
+//     const videos = await Video.find({ category })
+//       .lean()
+//       .limit(50)
+//       .select(
+//         "name content category cloudinaryUrl contentType originalName uploadedAt"
+//       );
 
-    const processedVideos = videos.map((video) => ({
-      name: video.name,
-      content: video.content,
-      category: video.category,
-      contentType: video.contentType,
-      videoUrl: video.cloudinaryUrl,
-      uploadedAt: video.uploadedAt,
-      _id: video._id,
-    }));
+//     const processedVideos = videos.map((video) => ({
+//       name: video.name,
+//       content: video.content,
+//       category: video.category,
+//       contentType: video.contentType,
+//       videoUrl: video.cloudinaryUrl,
+//       uploadedAt: video.uploadedAt,
+//       _id: video._id,
+//     }));
 
-    res.status(200).json({ videos: processedVideos });
-  } catch (err) {
-    console.error("Error fetching videos by category:", err);
-    res.status(500).json({ error: "Unable to fetch videos" });
-  }
-});
+//     res.status(200).json({ videos: processedVideos });
+//   } catch (err) {
+//     console.error("Error fetching videos by category:", err);
+//     res.status(500).json({ error: "Unable to fetch videos" });
+//   }
+// });
 
 // Delete image - Now also removes from Cloudinary
 app.delete("/api/images/:id", async (req, res) => {
