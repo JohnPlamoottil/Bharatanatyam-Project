@@ -1,7 +1,28 @@
-import { Router } from "express";
-import { getVideosByCategory } from "../controllers/videoController";
+const { Router } = require("express");
+const { uploadVideo } = require("../config/multer");
+const {
+  getVideos,
+  getVideosByCategory,
+  uploadSingleVideo,
+  uploadMultipleVideos,
+  deleteVideoHandler,
+} = require("../controllers/videoController");
+
 const router = Router();
 
-router.get("/api/videos/:category", getVideosByCategory);
+// GET routes
+router.get("/", getVideos);
+router.get("/:category", getVideosByCategory);
 
-export default router;
+// POST routes for upload
+router.post("/upload", uploadVideo.single("video"), uploadSingleVideo);
+router.post(
+  "/upload-multiple",
+  uploadVideo.array("videos", 10),
+  uploadMultipleVideos
+);
+
+// DELETE routes
+router.delete("/:id", deleteVideoHandler);
+
+module.exports = router;
