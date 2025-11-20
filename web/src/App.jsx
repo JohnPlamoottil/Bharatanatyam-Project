@@ -16,63 +16,71 @@ import ScrollToTop from "./components/scroll_to_top";
 import ComingSoon from "./components/coming_soon/coming_soon";
 import BackgroundAudio from "./components/background_audio";
 import Gallery from "./components/pages/gallery/gallery.jsx";
+import SignIn from "./components/pages/auth/signin.jsx";
+import SignUp from "./components/pages/auth/signup.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 export default function App() {
   return (
-    <Router>
-      <BackgroundAudio />
-      <ScrollToTop />
+    <AuthProvider>
+      <Router>
+        <BackgroundAudio />
+        <ScrollToTop />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/program" element={<Program />} />
+          <Route path="/program" element={<Program />} />
 
-        <Route path="/instructor" element={<Instructor />} />
+          <Route path="/instructor" element={<Instructor />} />
 
-        <Route path="/video" element={<Video />} />
+          <Route path="/video" element={<Video />} />
 
-        <Route path="/livestream" element={<Livestream />} />
+          <Route path="/livestream" element={<Livestream />} />
 
-        <Route path="/orchestra" element={<Orchestra />} />
+          <Route path="/orchestra" element={<Orchestra />} />
 
-        <Route
-          path="/video"
-          element={
-            <ComingSoon
-              message="Video gallery launches July 1!"
-              targetDate="2025-07-01T00:00:00"
-            >
-              <div>
+          <Route
+            path="/video"
+            element={
+              <ComingSoon
+                message="Video gallery launches July 1!"
+                targetDate="2025-07-01T00:00:00"
+              >
+                <div>
+                  <Navigation />
+                  <h1>Video Gallery</h1>
+                  <p>
+                    This is the videoe gallery content that will be available on
+                    July 1st, 2025.
+                  </p>
+                </div>
+              </ComingSoon>
+            }
+          />
+
+          <Route path="/venue" element={<Venue />} />
+
+          <Route path="/faqs" element={<FAQs />} />
+          <Route
+            path="/guestbook"
+            element={
+              <>
                 <Navigation />
-                <h1>Video Gallery</h1>
-                <p>
-                  This is the videoe gallery content that will be available on
-                  July 1st, 2025.
-                </p>
-              </div>
-            </ComingSoon>
-          }
-        />
+                <Guestbook />
+              </>
+            }
+          />
+          <Route path="/dancer" element={<Dancer />} />
 
-        <Route path="/venue" element={<Venue />} />
+          <Route path="/venue" element={<Venue />} />
 
-        <Route path="/faqs" element={<FAQs />} />
-        <Route
-          path="/guestbook"
-          element={
-            <>
-              <Navigation />
-              <Guestbook />
-            </>
-          }
-        />
-        <Route path="/dancer" element={<Dancer />} />
+          <Route path="/gallery" element={<Gallery />} />
 
-        <Route path="/venue" element={<Venue />} />
-
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
-    </Router>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }

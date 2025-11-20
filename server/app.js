@@ -47,7 +47,7 @@ app.use(generalLimiter);
 app.use("/api", apiRoutes);
 
 // 404 handler - must be after all other routes
-app.use((req, res) => {
+app.use((req, res, next) => {
   res.status(HTTP_STATUS.NOT_FOUND).json({
     error: ERROR_MESSAGES.ROUTE_NOT_FOUND,
     message: `Cannot ${req.method} ${req.originalUrl}`,

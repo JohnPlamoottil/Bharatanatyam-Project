@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import "./navigation-links.css";
 
 const Navigation = () => {
   const [menuOpen] = useState(false);
+  const { isAuthenticated, user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
       <NavLink to="/" className="nav-link">
@@ -41,6 +48,24 @@ const Navigation = () => {
       <NavLink to="/gallery" className="nav-link">
         Gallery
       </NavLink>
+
+      {isAuthenticated ? (
+        <>
+          <span className="nav-link nav-user">Hi, {user?.username}!</span>
+          <button onClick={handleLogout} className="nav-link nav-logout">
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <NavLink to="/signin" className="nav-link">
+            Sign In
+          </NavLink>
+          <NavLink to="/signup" className="nav-link">
+            Sign Up
+          </NavLink>
+        </>
+      )}
     </nav>
   );
 };
