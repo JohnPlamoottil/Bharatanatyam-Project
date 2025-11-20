@@ -13,10 +13,6 @@ const getMessages = async (req, res) => {
 const postMessage = async (req, res) => {
   const { dancerName, name, content } = req.body;
 
-  if (!name || !content) {
-    return res.status(400).json({ error: "Name and message are required" });
-  }
-
   try {
     const newMessage = await createMessage(dancerName, name, content);
     res.status(201).json({ message: newMessage });

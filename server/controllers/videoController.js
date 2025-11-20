@@ -52,7 +52,7 @@ const uploadSingleVideo = async (req, res) => {
         req.file.size /
         1024 /
         1024
-      ).toFixed(2)}MB)`
+      ).toFixed(2)}MB)`,
     );
     return res.status(413).json({
       error: `Video file is too large. Maximum size is 100MB, but your file is ${(
@@ -77,7 +77,7 @@ const uploadSingleVideo = async (req, res) => {
     // Upload to Cloudinary
     const uploadResult = await uploadVideoToCloudinary(
       req.file.buffer,
-      category
+      category,
     );
 
     // Save video metadata to MongoDB
@@ -133,15 +133,15 @@ const uploadMultipleVideos = async (req, res) => {
 
     try {
       console.log(
-        `Processing video ${i + 1}/${req.files.length}: ${file.originalname}`
+        `Processing video ${i + 1}/${req.files.length}: ${file.originalname}`,
       );
 
       // Check file size
       if (file.size > maxSize) {
         throw new Error(
           `File too large: ${(file.size / 1024 / 1024).toFixed(
-            2
-          )}MB (max 100MB)`
+            2,
+          )}MB (max 100MB)`,
         );
       }
 
@@ -149,7 +149,7 @@ const uploadMultipleVideos = async (req, res) => {
       const uploadResult = await uploadVideoToCloudinary(
         file.buffer,
         category,
-        i
+        i,
       );
 
       // Save video metadata to MongoDB

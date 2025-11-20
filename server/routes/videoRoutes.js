@@ -1,5 +1,9 @@
 const { Router } = require("express");
 const { uploadVideo } = require("../config/multer");
+const { uploadLimiter } = require("../middleware/rateLimiter");
+const { authMiddleware, adminMiddleware } = require("../middleware/auth");
+const { validate } = require("../middleware/validate");
+const { categoryParamSchema, idParamSchema } = require("../validators/schemas");
 const {
   getVideos,
   getVideosByCategory,
@@ -10,19 +14,33 @@ const {
 
 const router = Router();
 
-// GET routes
+// GET routes (public)
 router.get("/", getVideos);
-router.get("/:category", getVideosByCategory);
+router.get("/:category", validate(categoryParamSchema), getVideosByCategory);
 
-// POST routes for upload
-router.post("/upload", uploadVideo.single("video"), uploadSingleVideo);
+// POST routes for upload (requires authentication)
+router.post(
+  "/upload",
+  authMiddleware,
+  uploadLimiter,
+  uploadVideo.single("video"),
+  uploadSingleVideo,
+);
 router.post(
   "/upload-multiple",
+  authMiddleware,
+  uploadLimiter,
   uploadVideo.array("videos", 10),
-  uploadMultipleVideos
+  uploadMultipleVideos,
 );
 
-// DELETE routes
-router.delete("/:id", deleteVideoHandler);
+// DELETE routes (requires admin role)
+router.delete(
+  "/:id",
+  authMiddleware,
+  adminMiddleware,
+  validate(idParamSchema),
+  deleteVideoHandler,
+);
 
 module.exports = router;

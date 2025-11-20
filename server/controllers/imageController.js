@@ -58,7 +58,7 @@ const uploadSingleImage = async (req, res) => {
         .jpeg({ quality })
         .toBuffer();
 
-      if (compressedBuffer.length <= 2 * 1024 * 1024) break; // under 2MB
+      if (compressedBuffer.length <= 2 * 1024 * 1024) {break;} // under 2MB
       quality -= 10; // reduce quality and try again
     }
 
@@ -67,7 +67,7 @@ const uploadSingleImage = async (req, res) => {
     // Upload to Cloudinary
     const uploadResult = await uploadImageToCloudinary(
       compressedBuffer,
-      category
+      category,
     );
 
     // Save image metadata to MongoDB
@@ -105,7 +105,7 @@ const uploadMultipleImages = async (req, res) => {
 
     try {
       console.log(
-        `Processing image ${i + 1}/${req.files.length}: ${file.originalname}`
+        `Processing image ${i + 1}/${req.files.length}: ${file.originalname}`,
       );
 
       // Compress image
@@ -119,7 +119,7 @@ const uploadMultipleImages = async (req, res) => {
           .jpeg({ quality })
           .toBuffer();
 
-        if (compressedBuffer.length <= 2 * 1024 * 1024) break;
+        if (compressedBuffer.length <= 2 * 1024 * 1024) {break;}
         quality -= 10;
       }
 
@@ -127,7 +127,7 @@ const uploadMultipleImages = async (req, res) => {
       const uploadResult = await uploadImageToCloudinary(
         compressedBuffer,
         category,
-        i
+        i,
       );
 
       // Save image metadata to MongoDB

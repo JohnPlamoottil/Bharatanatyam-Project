@@ -6,7 +6,7 @@ async function getAllVideos() {
     .lean()
     .limit(100)
     .select(
-      "name content category cloudinaryUrl contentType originalName uploadedAt"
+      "name content category cloudinaryUrl contentType originalName uploadedAt",
     );
 
   const processedVideos = videos.map((video) => ({
@@ -27,7 +27,7 @@ async function fetchVideosByCategory(category) {
     .lean()
     .limit(50)
     .select(
-      "name content category cloudinaryUrl contentType originalName uploadedAt"
+      "name content category cloudinaryUrl contentType originalName uploadedAt",
     );
 
   const processedVideos = videos.map((video) => ({
@@ -67,7 +67,7 @@ async function uploadVideoToCloudinary(buffer, category, index = null) {
             console.log("Cloudinary video upload success:", result.secure_url);
             resolve(result);
           }
-        }
+        },
       )
       .end(buffer);
   });
@@ -77,7 +77,7 @@ async function saveVideoMetadata(
   file,
   category,
   uploadResult,
-  content = "No description"
+  content = "No description",
 ) {
   const newVideo = new Video({
     name: file.originalname || "uploaded-video",

@@ -6,7 +6,7 @@ async function getAllImages() {
     .lean()
     .limit(100)
     .select(
-      "name content category cloudinaryUrl contentType originalName uploadedAt"
+      "name content category cloudinaryUrl contentType originalName uploadedAt",
     );
 
   const processedImages = images.map((img) => ({
@@ -27,7 +27,7 @@ async function getImagesByCategory(category) {
     .lean()
     .limit(50)
     .select(
-      "name content category cloudinaryUrl contentType originalName uploadedAt"
+      "name content category cloudinaryUrl contentType originalName uploadedAt",
     );
 
   const processedImages = images.map((img) => ({
@@ -46,7 +46,7 @@ async function getImagesByCategory(category) {
 async function uploadImageToCloudinary(
   compressedBuffer,
   category,
-  index = null
+  index = null,
 ) {
   return new Promise((resolve, reject) => {
     const publicId =
@@ -72,7 +72,7 @@ async function uploadImageToCloudinary(
             console.log("Cloudinary upload success:", result.secure_url);
             resolve(result);
           }
-        }
+        },
       )
       .end(compressedBuffer);
   });
@@ -82,7 +82,7 @@ async function saveImageMetadata(
   file,
   category,
   uploadResult,
-  content = "No description"
+  content = "No description",
 ) {
   const newImage = new Image({
     name: file.originalname || "uploaded-image",
